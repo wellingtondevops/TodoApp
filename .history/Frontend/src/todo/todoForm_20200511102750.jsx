@@ -9,7 +9,8 @@ export default props => {
         if (e.key ==='Enter'){
             e.shiftKey ? props.handleSearch() : props.handleAdd()
         }else if (e.key ==='Escape'){
-            props.handleClear()
+            props.handleClear
+
         }
     }
     return (
@@ -19,7 +20,6 @@ export default props => {
                 <input id='description' className='form-control'
                     placeholder='Adicione uma tarefa'
                     onChange={props.handleChange}
-                    onKeyUp={keyHandler}
                     value={props.description}></input>
             </Grid>
             <Grid cols='12 3 2'>
