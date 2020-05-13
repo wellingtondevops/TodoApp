@@ -5,7 +5,9 @@ export default (state = INITIAL_STATE, action) => {
         case 'DESCRIPTION_CHANGED':
             return { ...state, description: action.payload }
         case 'TODO_SEARCHED':
-            return { ...state, list: action.payload }      
+            return { ...state, list: action.payload.data }
+        case 'TODO_ADDED':
+            return { ...state, description: '' }
         case 'TODO_CLEAR':
             return { ...state, description: '' }
 

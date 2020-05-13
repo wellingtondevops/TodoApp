@@ -57,5 +57,5 @@ export const remove = (todo) => {
 }
 
 export const clear = () => {
-    return [{ type: 'TODO_CLEAR' },search()]
+    return { type: 'TODO_CLEAR' }
 }
